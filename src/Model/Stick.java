@@ -13,5 +13,4 @@ public class Stick {
     public Character getStick() {
         return ' ';
     }
-
 }
