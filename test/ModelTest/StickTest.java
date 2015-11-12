@@ -22,7 +22,8 @@ public class StickTest {
 
     @Test
     public void ShouldReturnCharacterI() {
-        when(stick.getChar()).thenReturn('I');
-        assertTrue('I' == stick.getChar());
+        when(stick.getStick()).thenReturn('I');
+        assertTrue('I' == stick.getStick());
     }
+
 }

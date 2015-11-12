@@ -10,7 +10,8 @@ public class Stick {
         stick = 'I';
     }
 
-    public Character getChar() {
+    public Character getStick() {
         return ' ';
     }
+
 }
