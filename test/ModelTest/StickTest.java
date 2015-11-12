@@ -21,8 +21,7 @@ public class StickTest {
     }
 
     @Test
-    public void ShouldReturnCharacter() {
-        when(stick.getChar()).thenReturn('I');
-        assertEquals('I', stick.getChar());
+    public void ShouldReturnCharacterI() {
+        assertTrue('I' == stick.getChar());
     }
 }

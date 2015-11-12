@@ -5,7 +5,7 @@ package Model;
  */
 public class Stick {
 
-    public char getChar() {
+    public Character getChar() {
         return ' ';
     }
 }
