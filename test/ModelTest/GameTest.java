@@ -1,6 +1,7 @@
 package ModelTest;
 
 import Model.Game;
+import Model.Stick;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,11 +17,12 @@ public class GameTest {
 
     @Before
     public void setUp() throws Exception {
-        game = mock(Game.class);
+        game = new Game();
     }
 
     @Test
-    public void ShouldStartsAGame() {
+    public void ShouldStartAGame() {
         assertTrue(game.StartNewGame());
+
     }
 }

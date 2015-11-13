@@ -5,6 +5,6 @@ package Model;
  */
 public class Game {
     public boolean StartNewGame() {
-        return false;
+       return false;
     }
 }
