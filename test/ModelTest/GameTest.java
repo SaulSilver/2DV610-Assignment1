@@ -23,9 +23,10 @@ public class GameTest {
     @Test
     public void ShouldStartAGame() {
         char[] sticks = new char[22];
-        for(int i = 0; i < sticks.length; i++)
+        for(int i = 0; i < sticks.length; i++) {
             sticks[i] = 'I';
-        assertEquals(sticks, game.StartNewGame());
+        }
+        assertArrayEquals(sticks, game.StartNewGame());
 
     }
 }

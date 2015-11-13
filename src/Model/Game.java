@@ -6,6 +6,7 @@ package Model;
 public class Game {
     public char[] StartNewGame() {
         char[] arr = null;
+
         return arr;
     }
 }
