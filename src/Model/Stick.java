@@ -15,7 +15,7 @@ public class Stick {
     }
 
     public void setStick(char stick) {
-        this.stick = '-';
+        this.stick = stick;
     }
 
     @Override
