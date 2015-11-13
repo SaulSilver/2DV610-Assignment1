@@ -4,10 +4,10 @@ package Model;
  * Created by Hatem on 11/12/2015.
  */
 public class Game {
-    public char[] StartNewGame() {
-        char[] sticks = new char[22];
-        for(int i = 0; i < sticks.length; i++)
-            sticks[i] = 'I';
+    public Stick[] StartNewGame() {
+        Stick[] sticks = new Stick[22];
+        for(Stick stick : sticks)
+            stick = new Stick();
         return sticks;
     }
 }
