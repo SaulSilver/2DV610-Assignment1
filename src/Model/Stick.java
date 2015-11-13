@@ -11,12 +11,12 @@ public class Stick {
     }
 
     public Character getStick() {
-        return ' ';
+        return stick;
     }
 
     @Override
     public String toString()
     {
-        return String.valueOf(this.stick);
+        return String.valueOf(getStick());
     }
 }
