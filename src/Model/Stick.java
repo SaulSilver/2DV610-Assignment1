@@ -14,6 +14,10 @@ public class Stick {
         return stick;
     }
 
+    public void setStick(char stick) {
+
+    }
+
     @Override
     public String toString()
     {

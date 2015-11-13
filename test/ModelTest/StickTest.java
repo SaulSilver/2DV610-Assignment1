@@ -12,10 +12,12 @@ import static org.junit.Assert.*;
 public class StickTest {
 
     Stick stick;
+    Stick stick1;
 
     @Before
     public void setUp() throws Exception {
         stick = mock(Stick.class);
+        stick1 = new Stick();
     }
 
     @Test
@@ -26,7 +28,12 @@ public class StickTest {
 
     @Test
     public void ShouldReturnCharacter() {
-        Stick stick1 = new Stick();
         assertEquals("I", stick1.toString());
+    }
+
+    @Test
+    public void ShouldSetCharacter(){
+        stick1.setStick('-');
+        assertTrue('-' == stick1.getStick());
     }
 }
