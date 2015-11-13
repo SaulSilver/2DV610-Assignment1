@@ -22,7 +22,10 @@ public class GameTest {
 
     @Test
     public void ShouldStartAGame() {
-        assertTrue(game.StartNewGame());
+        char[] sticks = new char[22];
+        for(int i = 0; i < sticks.length; i++)
+            sticks[i] = 'I';
+        assertEquals(sticks, game.StartNewGame());
 
     }
 }
