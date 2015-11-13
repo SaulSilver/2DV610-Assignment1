@@ -24,4 +24,9 @@ public class StickTest {
         assertTrue('I' == stick.getStick());
     }
 
+    @Test
+    public void ShouldReturnCharacter() {
+        Stick stick1 = new Stick();
+        assertEquals('I', stick1.toString());
+    }
 }
