@@ -13,4 +13,10 @@ public class Stick {
     public Character getStick() {
         return ' ';
     }
+
+    @Override
+    public String toString()
+    {
+        return String.valueOf(this.stick);
+    }
 }
