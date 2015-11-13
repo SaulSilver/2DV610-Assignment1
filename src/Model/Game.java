@@ -5,8 +5,9 @@ package Model;
  */
 public class Game {
     public char[] StartNewGame() {
-        char[] arr = null;
-
-        return arr;
+        char[] sticks = new char[22];
+        for(int i = 0; i < sticks.length; i++)
+            sticks[i] = 'I';
+        return sticks;
     }
 }
