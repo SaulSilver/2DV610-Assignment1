@@ -12,6 +12,7 @@ public class Game {
     }
 
     public boolean DrawStick(int i) {
-        return false;
+        if(i <= 3 && i > 0){ return true; }
+        else{ return false;}
     }
 }
