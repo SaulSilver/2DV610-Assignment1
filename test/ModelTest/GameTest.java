@@ -28,4 +28,9 @@ public class GameTest {
         assertArrayEquals(sticks, game.StartNewGame());
 
     }
+
+    @Test
+    public void ShouldDrawSticks(){
+        assertTrue(game.DrawStick(2));
+    }
 }

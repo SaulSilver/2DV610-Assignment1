@@ -10,4 +10,8 @@ public class Game {
             stick = new Stick();
         return sticks;
     }
+
+    public boolean DrawStick(int i) {
+        return false;
+    }
 }
