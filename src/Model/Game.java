@@ -30,4 +30,8 @@ public class Game {
         }
         else{ return false;}
     }
+
+    public int ComputerDrawStick() {
+        return 0;
+    }
 }
