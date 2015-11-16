@@ -32,6 +32,6 @@ public class Game {
     }
 
     public int ComputerDrawStick() {
-        return 0;
+        return 1;
     }
 }
