@@ -50,9 +50,10 @@ public class GameTest {
     }
 
     @Test
-    public void ShouldComputerDrawSticksMoreThanZero(){
+    public void ShouldComputerDrawSticks(){
         game.StartNewGame();
-        assertTrue("Computer draw must be more than 0",game.ComputerDrawStick() > 0);
+        assertTrue("Computer draw must be more than 0", game.ComputerDrawStick() > 0);
+        assertTrue("Computer draw must be less than or equal to 3",game.ComputerDrawStick() <= 3);
     }
 
 }
