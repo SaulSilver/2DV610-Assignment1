@@ -37,5 +37,10 @@ public class ConsoleTest {
         verify(output).println(Console.WELCOME);
     }
 
+    @Test
+    public void ShouldShowErrorMessage(){
+        sut.WrongInput();
+        verify(output).print(Console.ERROR_MESSAGE);
+    }
 
 }
