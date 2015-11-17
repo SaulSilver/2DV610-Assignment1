@@ -23,6 +23,6 @@ public class Console {
    }
 
     public void WrongInput() {
-
+        console.print(ERROR_MESSAGE);
     }
 }
