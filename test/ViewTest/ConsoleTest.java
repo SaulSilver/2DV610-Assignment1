@@ -55,7 +55,7 @@ public class ConsoleTest {
     @Test
     public void ShouldGetUserInput() throws IOException {
         when(input.readLine()).thenReturn("p");
-        sut.GetStartUpInput(input);
+        sut.GetStartUpInput();
         verify(input).readLine();
     }
 }

@@ -11,6 +11,7 @@ import java.io.PrintWriter;
  */
 public class Console {
     private PrintWriter console;
+    private BufferedReader input;
 
     public static final String WELCOME = "Wanna play a game?\nWelcome to the Cool Sticks game. Let's see who is better\n" +
             "The rules are simple: draw 1-3 sticks, then I will draw 1-3 sticks. If you draw the last stick, you lose mate!\n"+
@@ -19,6 +20,7 @@ public class Console {
 
     public Console(BufferedReader input, PrintWriter output) {
         console = output;
+        this.input = input;
     }
 
    public void StartUp(){
@@ -38,8 +40,7 @@ public class Console {
         console.println(sb.toString());
     }
 
-    public char GetStartUpInput(BufferedReader input) throws IOException {
-        String str = input.readLine();
-        return str.charAt(0);
+    public char GetStartUpInput() throws IOException {
+        return input.readLine().charAt(0);
     }
 }
