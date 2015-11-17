@@ -16,7 +16,7 @@ public class Console {
 
     }
 
-   public void StartUp(){
-
+   public void StartUp(PrintWriter output){
+        output.println(WELCOME);
    }
 }
