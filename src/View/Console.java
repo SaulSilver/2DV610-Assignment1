@@ -29,6 +29,6 @@ public class Console {
     }
 
     public void ShowSticks(Stick[] sticks) {
-
+        console.println("IIIIIIIIIIIIIIIIIIIIII");
     }
 }
