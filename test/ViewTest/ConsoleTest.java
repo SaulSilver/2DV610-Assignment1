@@ -33,7 +33,7 @@ public class ConsoleTest {
 
     @Test
     public void ShouldShowStartUpMessage(){
-        sut.StartUp(output);
+        sut.StartUp();
         verify(output).println(Console.WELCOME);
     }
 
