@@ -1,5 +1,7 @@
 package View;
 
+import Model.Stick;
+
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 
@@ -24,5 +26,9 @@ public class Console {
 
     public void WrongInput() {
         console.println(ERROR_MESSAGE);
+    }
+
+    public void ShowSticks(Stick[] sticks) {
+
     }
 }

@@ -1,6 +1,7 @@
 package ViewTest;
 
 import Model.Game;
+import Model.Stick;
 import View.Console;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +26,7 @@ public class ConsoleTest {
 
     @Before
     public void setUp() throws Exception {
-        game = mock(Game.class);
+        game = new Game();
         input = mock(BufferedReader.class);
         output = mock(PrintWriter.class);
         sut = new Console(input, output);
@@ -43,4 +44,10 @@ public class ConsoleTest {
         verify(output).println(Console.ERROR_MESSAGE);
     }
 
+    @Test
+    public void ShouldShowSticks(){
+        final String defaultStick = "IIIIIIIIIIIIIIIIIIIIII";
+        sut.ShowSticks(game.StartNewGame());
+        verify(output).println(defaultStick);
+    }
 }
