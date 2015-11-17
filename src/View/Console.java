@@ -38,7 +38,8 @@ public class Console {
         console.println(sb.toString());
     }
 
-    public char GetStartUpInput() throws IOException {
-       return 0;
+    public char GetStartUpInput(BufferedReader input) throws IOException {
+        String str = input.readLine();
+        return str.charAt(0);
     }
 }
