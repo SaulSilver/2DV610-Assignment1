@@ -3,7 +3,7 @@ package ModelTest;
 import Model.Stick;
 import org.junit.Before;
 import org.junit.Test;
-import static org.mockito.Mockito.*;
+
 import static org.junit.Assert.*;
 
 /**
@@ -11,29 +11,26 @@ import static org.junit.Assert.*;
  */
 public class StickTest {
 
-    Stick stick;
-    Stick stick1;
+    Stick sut;
 
     @Before
     public void setUp() throws Exception {
-        stick = mock(Stick.class);
-        stick1 = new Stick();
+        sut = new Stick();
     }
 
     @Test
     public void ShouldReturnCharacterI() {
-        when(stick.getStick()).thenReturn('I');
-        assertTrue('I' == stick.getStick());
+        assertTrue('I' == sut.getStick());
     }
 
     @Test
     public void ShouldReturnCharacter() {
-        assertEquals("I", stick1.toString());
+        assertEquals("I", sut.toString());
     }
 
     @Test
     public void ShouldSetCharacter(){
-        stick1.setStick('-');
-        assertTrue('-' == stick1.getStick());
+        sut.setStick('-');
+        assertTrue('-' == sut.getStick());
     }
 }

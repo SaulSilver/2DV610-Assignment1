@@ -6,18 +6,17 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
 
 /**
  * Created by Hatem on 11/12/2015.
  */
 public class GameTest {
 
-    Game game;
+    Game sut;
 
     @Before
     public void setUp() throws Exception {
-        game = new Game();
+        sut = new Game();
     }
 
     @Test
@@ -28,7 +27,7 @@ public class GameTest {
             DefaultSticks[i] = a_stick;
         }
 
-        Stick[] toBeTested = game.StartNewGame();
+        Stick[] toBeTested = sut.StartNewGame();
         boolean flag = false;
 
         for(int i = 0; i < DefaultSticks.length; i++){
@@ -45,15 +44,15 @@ public class GameTest {
 
     @Test
     public void ShouldDrawSticks(){
-        game.StartNewGame();
-        assertTrue(game.DrawStick(2));
+        sut.StartNewGame();
+        assertTrue(sut.DrawStick(2));
     }
 
     @Test
     public void ShouldComputerDrawSticks(){
-        game.StartNewGame();
-        assertTrue("Computer draw must be more than 0", game.ComputerDrawStick() > 0);
-        assertTrue("Computer draw must be less than or equal to 3",game.ComputerDrawStick() <= 3);
+        sut.StartNewGame();
+        assertTrue("Computer draw must be more than 0", sut.ComputerDrawStick() > 0);
+        assertTrue("Computer draw must be less than or equal to 3", sut.ComputerDrawStick() <= 3);
     }
 
 }
