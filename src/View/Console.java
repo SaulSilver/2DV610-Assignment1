@@ -29,6 +29,11 @@ public class Console {
     }
 
     public void ShowSticks(Stick[] sticks) {
-        console.println("IIIIIIIIIIIIIIIIIIIIII");
+        StringBuilder sb = new StringBuilder();
+
+        for(Stick stick : sticks)
+            sb.append(stick.toString());
+
+        console.println(sb.toString());
     }
 }

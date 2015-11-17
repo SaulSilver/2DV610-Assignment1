@@ -23,6 +23,7 @@ public class ConsoleTest {
     Game game;
     BufferedReader input;
     PrintWriter output;
+    String defaultStick;                    //Sticks showing up on starting playing
 
     @Before
     public void setUp() throws Exception {
@@ -30,6 +31,7 @@ public class ConsoleTest {
         input = mock(BufferedReader.class);
         output = mock(PrintWriter.class);
         sut = new Console(input, output);
+        defaultStick = "IIIIIIIIIIIIIIIIIIIIII";
     }
 
     @Test
@@ -46,7 +48,6 @@ public class ConsoleTest {
 
     @Test
     public void ShouldShowSticks(){
-        final String defaultStick = "IIIIIIIIIIIIIIIIIIIIII";
         sut.ShowSticks(game.StartNewGame());
         verify(output).println(defaultStick);
     }
