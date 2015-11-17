@@ -51,4 +51,11 @@ public class ConsoleTest {
         sut.ShowSticks(game.StartNewGame());
         verify(output).println(defaultStick);
     }
+
+    @Test
+    public void ShouldGetUserInput() throws IOException {
+        when(input.readLine()).thenReturn("p");
+        sut.GetStartUpInput();
+        verify(input).readLine();
+    }
 }

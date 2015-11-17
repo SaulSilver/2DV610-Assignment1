@@ -3,6 +3,7 @@ package View;
 import Model.Stick;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
@@ -35,5 +36,9 @@ public class Console {
             sb.append(stick.toString());
 
         console.println(sb.toString());
+    }
+
+    public char GetStartUpInput() throws IOException {
+       return 0;
     }
 }
