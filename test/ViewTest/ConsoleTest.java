@@ -40,7 +40,7 @@ public class ConsoleTest {
     @Test
     public void ShouldShowErrorMessage(){
         sut.WrongInput();
-        verify(output).print(Console.ERROR_MESSAGE);
+        verify(output).println(Console.ERROR_MESSAGE);
     }
 
 }
