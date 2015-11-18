@@ -35,8 +35,8 @@ public class Game {
     public int ComputerDrawStick() {
         int sticksNumber;
 
-        if(counter >= 18) {     //TODO: Change the logic of computer's choice, make it take 1 stick always here
-            sticksNumber = MAX_STICKS_NUMBER - counter;
+        if(counter >= 18) {
+            sticksNumber = 1;
         }
         else {
             Random rand = new Random();
@@ -58,6 +58,12 @@ public class Game {
     }
 
     public boolean OneStickLeft() {
-        return false;
+        int counter = 0;
+
+        for(Stick s : sticks){
+            if (s.toString().equals("I"))
+                counter++;
+        }
+        return counter == 1;
     }
 }

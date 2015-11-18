@@ -12,10 +12,12 @@ import static org.junit.Assert.*;
 public class GameTest {
 
     Game sut;
+    Stick[] toBeTested;
 
     @Before
     public void setUp() throws Exception {
         sut = new Game();
+        toBeTested = sut.StartNewGame();
     }
 
     @Test
@@ -26,7 +28,6 @@ public class GameTest {
             DefaultSticks[i] = a_stick;
         }
 
-        Stick[] toBeTested = sut.StartNewGame();
         boolean flag = false;
 
         for(int i = 0; i < DefaultSticks.length; i++){
@@ -43,20 +44,17 @@ public class GameTest {
 
     @Test
     public void ShouldDrawSticks(){
-        sut.StartNewGame();
         assertTrue(sut.DrawStick(2));
     }
 
     @Test
     public void ShouldComputerDrawSticks(){
-        sut.StartNewGame();
         assertTrue("Computer draw must be more than 0", sut.ComputerDrawStick() > 0);
         assertTrue("Computer draw must be less than or equal to 3", sut.ComputerDrawStick() <= 3);
     }
 
     @Test
     public void ShouldReturnWhetherThereIsOneIinTheSticksArray(){
-        sut.StartNewGame();
         assertTrue(!sut.OneStickLeft());
     }
 }
