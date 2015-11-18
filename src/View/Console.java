@@ -60,7 +60,5 @@ public class Console {
         return userChoice;
     }
 
-    public void GetComputerChoice(int i) {
-        console.println(COMPUTER_CHOICE1+3+COMPUTER_CHOICE2);
-    }
+    public void GetComputerChoice(int computerChoice) { console.println(COMPUTER_CHOICE1 + computerChoice + COMPUTER_CHOICE2);}
 }

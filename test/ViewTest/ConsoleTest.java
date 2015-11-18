@@ -79,6 +79,6 @@ public class ConsoleTest {
     @Test
     public void ShouldReturnComputerChoice()throws IOException {
         sut.GetComputerChoice(3);
-        verify(output).println(Console.COMPUTER_CHOICE1+"3"+Console.COMPUTER_CHOICE2);
+        verify(output).println(Console.COMPUTER_CHOICE1+3+Console.COMPUTER_CHOICE2);
     }
 }
