@@ -35,7 +35,7 @@ public class Game {
     public int ComputerDrawStick() {
         int sticksNumber;
 
-        if(counter >= 18) {
+        if(counter >= 18) {     //TODO: Change the logic of computer's choice, make it take 1 stick always here
             sticksNumber = MAX_STICKS_NUMBER - counter;
         }
         else {
@@ -55,5 +55,9 @@ public class Game {
             sticks[sticks.length - counter] = drawnStick;
             counter++;
         }
+    }
+
+    public boolean OneStickLeft() {
+        return true;
     }
 }

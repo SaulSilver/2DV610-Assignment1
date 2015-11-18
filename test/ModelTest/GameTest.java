@@ -54,4 +54,9 @@ public class GameTest {
         assertTrue("Computer draw must be less than or equal to 3", sut.ComputerDrawStick() <= 3);
     }
 
+    @Test
+    public void ShouldReturnWhetherThereIsOneIinTheSticksArray(){
+        sut.StartNewGame();
+        assertTrue(!sut.OneStickLeft());
+    }
 }
