@@ -45,6 +45,6 @@ public class Console {
     }
 
     public int CheckInput(char p) {
-        return 0;
+        return 1;
     }
 }
