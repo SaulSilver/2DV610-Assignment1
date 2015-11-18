@@ -75,4 +75,10 @@ public class ConsoleTest {
         when(input.readLine()).thenReturn("1");
         assertEquals(1, sut.GetPlayerChoice());
     }
+
+    @Test
+    public void ShouldReturnComputerChoice()throws IOException {
+        sut.GetComputerChoice(3);
+        verify(output).println(Console.COMPUTER_CHOICE1+"3"+Console.COMPUTER_CHOICE2);
+    }
 }

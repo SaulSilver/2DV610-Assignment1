@@ -17,6 +17,8 @@ public class Console {
             "The rules are simple: draw 1-3 sticks, then I will draw 1-3 sticks. If you draw the last stick, you lose mate!\n"+
             "Press p to play or q to quit:";
     public static final String ERROR_MESSAGE = "Please enter the correct value";
+    public static final String COMPUTER_CHOICE1 = "Computer drew ";
+    public static final String COMPUTER_CHOICE2 = " sticks.";
 
     public Console(BufferedReader input, PrintWriter output) {
         console = output;
@@ -56,5 +58,9 @@ public class Console {
     public int GetPlayerChoice() throws IOException {
         int userChoice = Integer.parseInt(input.readLine());
         return userChoice;
+    }
+
+    public void GetComputerChoice(int i) {
+
     }
 }
