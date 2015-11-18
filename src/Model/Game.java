@@ -58,6 +58,6 @@ public class Game {
     }
 
     public boolean OneStickLeft() {
-        return true;
+        return false;
     }
 }
