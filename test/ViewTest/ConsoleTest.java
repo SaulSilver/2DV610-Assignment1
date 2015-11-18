@@ -81,4 +81,10 @@ public class ConsoleTest {
         sut.GetComputerChoice(3);
         verify(output).println(Console.COMPUTER_CHOICE1 + 3 + Console.COMPUTER_CHOICE2);
     }
+
+    @Test
+    public void ShouldShowEndGameMessage(){
+        sut.EndGame();
+        verify(output).println("Bye");
+    }
 }
