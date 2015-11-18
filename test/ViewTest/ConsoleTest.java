@@ -63,4 +63,10 @@ public class ConsoleTest {
     public void ShouldReturnUserInput() throws IOException {
         assertEquals(2, sut.CheckInput('q'));
     }
+
+    @Test
+    public void ShouldShowErrorMessageOnWrongInput(){
+        sut.CheckInput('3');
+        verify(output).println(Console.ERROR_MESSAGE);
+    }
 }
