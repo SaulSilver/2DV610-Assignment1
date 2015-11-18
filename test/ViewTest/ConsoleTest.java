@@ -87,4 +87,10 @@ public class ConsoleTest {
         sut.EndGame();
         verify(output).println(Console.END_GAME);
     }
+
+    @Test
+    public void ShouldShowUserLosesMessage(){
+        sut.UserLose();
+        verify(output).println("you lose");
+    }
 }
