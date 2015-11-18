@@ -63,5 +63,6 @@ public class Console {
     public void GetComputerChoice(int computerChoice) { console.println(COMPUTER_CHOICE1 + computerChoice + COMPUTER_CHOICE2); }
 
     public void EndGame() {
+        console.println("Bye");
     }
 }
