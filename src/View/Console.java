@@ -61,6 +61,6 @@ public class Console {
     }
 
     public void GetComputerChoice(int i) {
-
+        console.println(COMPUTER_CHOICE1+3+COMPUTER_CHOICE2);
     }
 }
