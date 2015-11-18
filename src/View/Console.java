@@ -44,7 +44,11 @@ public class Console {
         return input.readLine().charAt(0);
     }
 
-    public int CheckInput(char p) {
-        return 1;
+    public int CheckInput(char input) {
+        if (input == 'p') { return 1; }
+        else if (input == 'q') { return 2;}
+        else {
+            return 0;
+        }
     }
 }

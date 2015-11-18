@@ -61,6 +61,6 @@ public class ConsoleTest {
 
     @Test
     public void ShouldReturnUserInput() throws IOException {
-        assertEquals(1, sut.CheckInput('p'));
+        assertEquals(2, sut.CheckInput('q'));
     }
 }
