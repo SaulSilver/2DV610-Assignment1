@@ -48,6 +48,7 @@ public class Console {
         if (input == 'p') { return 1; }
         else if (input == 'q') { return 2;}
         else {
+            console.println(ERROR_MESSAGE);
             return 0;
         }
     }
