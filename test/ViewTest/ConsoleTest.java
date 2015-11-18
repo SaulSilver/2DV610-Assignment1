@@ -10,6 +10,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -89,8 +90,8 @@ public class ConsoleTest {
     }
 
     @Test
-    public void ShouldShowUserLosesMessage(){
+    public void ShouldShowUserLosesMessage() {
         sut.UserLose();
-        verify(output).println("you lose");
+        verify(output).println(Console.LOSE_MESSAGE);
     }
 }

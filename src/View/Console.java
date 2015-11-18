@@ -5,6 +5,7 @@ import Model.Stick;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Hatem on 11/16/2015.
@@ -20,6 +21,7 @@ public class Console {
     public static final String COMPUTER_CHOICE1 = "Computer drew ";
     public static final String COMPUTER_CHOICE2 = " sticks.";
     public static final String END_GAME = "Well \\_(._.)_/";
+    public static final String LOSE_MESSAGE = "You lose, you owe me 100 SEK now!";
 
     public Console(BufferedReader input, PrintWriter output) {
         console = output;
@@ -66,6 +68,6 @@ public class Console {
     public void EndGame() { console.println(END_GAME);}
 
     public void UserLose() {
-        console.println("you lose");
+        console.println(LOSE_MESSAGE);
     }
 }
