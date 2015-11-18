@@ -66,5 +66,6 @@ public class Console {
     public void EndGame() { console.println(END_GAME);}
 
     public void UserLose() {
+        console.println("you lose");
     }
 }
