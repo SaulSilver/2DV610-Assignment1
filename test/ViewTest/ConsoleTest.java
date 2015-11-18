@@ -58,4 +58,9 @@ public class ConsoleTest {
         sut.GetStartUpInput();
         verify(input).readLine();
     }
+
+    @Test
+    public void ShouldReturnUserInput() throws IOException {
+        assertEquals(1, sut.CheckInput('p'));
+    }
 }

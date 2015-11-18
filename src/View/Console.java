@@ -43,4 +43,8 @@ public class Console {
     public char GetStartUpInput() throws IOException {
         return input.readLine().charAt(0);
     }
+
+    public int CheckInput(char p) {
+        return 0;
+    }
 }
