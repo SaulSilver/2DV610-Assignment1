@@ -52,4 +52,8 @@ public class Console {
             return 0;
         }
     }
+
+    public int GetPlayerChoice() {
+        return 0;
+    }
 }

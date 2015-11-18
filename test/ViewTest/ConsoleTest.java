@@ -69,4 +69,10 @@ public class ConsoleTest {
         sut.CheckInput('3');
         verify(output).println(Console.ERROR_MESSAGE);
     }
+
+    @Test
+    public void ShouldReturnTheUserNumberChoiceOfSticks() throws IOException {
+        when(input.readLine()).thenReturn("3");
+        assertEquals(3, sut.GetPlayerChoice());
+    }
 }
