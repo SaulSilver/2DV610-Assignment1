@@ -19,6 +19,7 @@ public class Console {
     public static final String ERROR_MESSAGE = "Please enter the correct value";
     public static final String COMPUTER_CHOICE1 = "Computer drew ";
     public static final String COMPUTER_CHOICE2 = " sticks.";
+    public static final String END_GAME = "Well \\_(._.)_/";
 
     public Console(BufferedReader input, PrintWriter output) {
         console = output;
@@ -62,7 +63,5 @@ public class Console {
 
     public void GetComputerChoice(int computerChoice) { console.println(COMPUTER_CHOICE1 + computerChoice + COMPUTER_CHOICE2); }
 
-    public void EndGame() {
-        console.println("Bye");
-    }
+    public void EndGame() { console.println(END_GAME);}
 }

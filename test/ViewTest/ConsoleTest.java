@@ -85,6 +85,6 @@ public class ConsoleTest {
     @Test
     public void ShouldShowEndGameMessage(){
         sut.EndGame();
-        verify(output).println("Bye");
+        verify(output).println(Console.END_GAME);
     }
 }
