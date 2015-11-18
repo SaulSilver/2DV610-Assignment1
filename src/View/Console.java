@@ -53,7 +53,8 @@ public class Console {
         }
     }
 
-    public int GetPlayerChoice() {
-        return 3;
+    public int GetPlayerChoice() throws IOException {
+        int userChoice = Integer.parseInt(input.readLine());
+        return userChoice;
     }
 }

@@ -72,7 +72,7 @@ public class ConsoleTest {
 
     @Test
     public void ShouldReturnTheUserNumberChoiceOfSticks() throws IOException {
-        when(input.readLine()).thenReturn("3");
-        assertEquals(3, sut.GetPlayerChoice());
+        when(input.readLine()).thenReturn("1");
+        assertEquals(1, sut.GetPlayerChoice());
     }
 }
