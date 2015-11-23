@@ -1,5 +1,6 @@
 package View;
 
+import Model.Game;
 import Model.Stick;
 
 import java.io.BufferedReader;
@@ -36,12 +37,12 @@ public class Console {
         console.println(ERROR_MESSAGE);
     }
 
-    public void ShowSticks(Stick[] sticks) {
+    public void ShowSticks(Game game)
+    {
         StringBuilder sb = new StringBuilder();
-
-        for(Stick stick : sticks)
+        for (Stick stick : game.getSticks()) {
             sb.append(stick.toString());
-
+        }
         console.println(sb.toString());
     }
 

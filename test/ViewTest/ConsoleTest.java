@@ -44,7 +44,8 @@ public class ConsoleTest {
 
     @Test
     public void ShouldShowSticks(){
-        sut.ShowSticks(game.StartNewGame());
+        game.StartNewGame();
+        sut.ShowSticks(game);
         verify(output).println(defaultStick);
     }
 

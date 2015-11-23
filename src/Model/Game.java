@@ -13,7 +13,7 @@ public class Game {
     private final int MIN_CHOICE = 1;
 
 
-    public Stick[] StartNewGame() {
+    public void StartNewGame() {
         counter = 1;
         sticks = new Stick[MAX_STICKS_NUMBER + 1];
 
@@ -21,7 +21,6 @@ public class Game {
             Stick a_stick = new Stick();
             sticks[i] = a_stick;
         }
-        return sticks;
     }
 
     public boolean DrawStick(int sticksNumber) {
@@ -65,5 +64,9 @@ public class Game {
                 counter++;
         }
         return counter == 1;
+    }
+
+    public Stick[] getSticks() {
+        return sticks;
     }
 }

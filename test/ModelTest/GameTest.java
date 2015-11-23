@@ -17,7 +17,8 @@ public class GameTest {
     @Before
     public void setUp() throws Exception {
         sut = new Game();
-        toBeTested = sut.StartNewGame();
+        sut.StartNewGame();
+        toBeTested = sut.getSticks();
     }
 
     @Test

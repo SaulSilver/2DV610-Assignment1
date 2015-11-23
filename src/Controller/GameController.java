@@ -10,9 +10,16 @@ import java.io.IOException;
  */
 public class GameController {
     Console m_console;
+    Game m_game;
 
     public int StartUpGame(Game game, Console view) throws IOException {
         m_console = view;
+        m_game = game;
+
+        m_game.StartNewGame();
+        m_console.StartUp();
+        m_console.ShowSticks(m_game);
+
         char input = m_console.GetStartUpInput();
         return m_console.CheckInput(input);
     }

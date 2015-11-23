@@ -28,7 +28,7 @@ public class GameControllerTest {
     }
 
     @Test
-    public void ShouldShowStartUpMessagesAndReturnUserChoiceAsCharacter() throws IOException {
+    public void ShouldShowStartUpMessagesAndReturn1WhenInputIsToPlay() throws IOException {
         when(view.GetStartUpInput()).thenReturn('p');
         when(view.CheckInput('p')).thenReturn(1);
         assertTrue(1 == controller.StartUpGame(game, view));
