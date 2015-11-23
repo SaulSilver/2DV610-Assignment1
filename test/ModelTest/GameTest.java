@@ -48,6 +48,11 @@ public class GameTest {
     }
 
     @Test
+    public void ShouldNotDrawSticksAndReturnFalse(){
+        assertFalse(sut.DrawStick(4));
+    }
+
+    @Test
     public void ShouldComputerDrawSticks(){
         assertTrue("Computer draw must be more than 0", sut.ComputerDrawStick() > 0);
         assertTrue("Computer draw must be less than or equal to 3", sut.ComputerDrawStick() <= 3);
