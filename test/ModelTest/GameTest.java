@@ -66,7 +66,7 @@ public class GameTest {
 
     @Test
     public void ShouldReturnFalseIfCounterEqualOrGreater21(){
-
+        sut.setCounter(21);
         assertFalse(sut.CheckSticks());
     }
 }

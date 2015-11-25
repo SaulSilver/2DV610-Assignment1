@@ -71,7 +71,11 @@ public class Game {
     }
 
     public boolean CheckSticks() {
-        counter = 21;
-        return !(counter >= MAX_STICKS_NUMBER);
+        if (counter >= MAX_STICKS_NUMBER) return false;
+        else return true;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
     }
 }
