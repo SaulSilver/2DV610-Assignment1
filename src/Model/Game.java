@@ -71,6 +71,7 @@ public class Game {
     }
 
     public boolean CheckSticks() {
-        return true;
+        counter = 21;
+        return !(counter >= MAX_STICKS_NUMBER);
     }
 }
