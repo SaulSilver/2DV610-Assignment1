@@ -63,4 +63,9 @@ public class GameTest {
     public void ShouldReturnWhetherThereIsOneIinTheSticksArray(){
         assertTrue(!sut.OneStickLeft());
     }
+
+    @Test
+    public void ShouldReturnFalseIfCounterEqualOrGreater21(){
+        assertFalse(sut.CheckSticks());
+    }
 }

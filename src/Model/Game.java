@@ -69,4 +69,8 @@ public class Game {
     public Stick[] getSticks() {
         return sticks;
     }
+
+    public boolean CheckSticks() {
+        return true;
+    }
 }
