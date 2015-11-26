@@ -12,6 +12,9 @@ public class GameController {
     Console m_console;
     Game m_game;
 
+    public void PlayGame(Game game, Console view) {
+    }
+
     public int StartUpGame(Game game, Console view) throws IOException {
         m_console = view;
         m_game = game;
@@ -23,4 +26,6 @@ public class GameController {
         char input = m_console.GetStartUpInput();
         return m_console.CheckInput(input);
     }
+
+
 }

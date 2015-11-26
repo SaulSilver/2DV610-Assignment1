@@ -32,6 +32,33 @@ public class GameControllerTest {
         when(view.GetStartUpInput()).thenReturn('p');
         when(view.CheckInput('p')).thenReturn(1);
         assertTrue(1 == controller.StartUpGame(game, view));
+    }
+
+    @Test
+    public void ShouldShowStartUpMessagesAndReturn2WhenInputIsToQuit() throws IOException {
+        when(view.GetStartUpInput()).thenReturn('q');
+        when(view.CheckInput('q')).thenReturn(2);
+        assertTrue(2 == controller.StartUpGame(game, view));
+    }
+
+    @Test
+    public void ShouldCheckWhetherTheMethodsAreCalledInPlayGameMethod() throws IOException {
+
+        when(view.GetPlayerChoice()).thenReturn(2);
+        when(game.ComputerDrawStick()).thenReturn(2);
+
+        controller.PlayGame(game, view);
+        controller.StartUpGame(game, view);
+
+        verify(game).CheckSticks();
+        verify(game).DrawStick(view.GetPlayerChoice());
+        verify(game).ComputerDrawStick();
+        verify(view).GetComputerChoice(game.ComputerDrawStick());
+        verify(view).ShowSticks(game);
+        verify(view).WrongInput();
+        verify(view).UserLose();
+        verify(game).OneStickLeft();
+        verify(view).EndGame();
 
     }
 }
