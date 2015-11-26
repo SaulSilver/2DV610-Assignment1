@@ -60,6 +60,7 @@ public class Console {
     }
 
     public int GetPlayerChoice() throws IOException {
+        console.println("Enter the number:");
         int userChoice = Integer.parseInt(input.readLine());
         return userChoice;
     }
