@@ -54,7 +54,7 @@ public class GameControllerTest {
         verify(game).DrawStick(view.GetPlayerChoice());
         verify(game).ComputerDrawStick();
         verify(view).GetComputerChoice(game.ComputerDrawStick());
-        verify(view).ShowSticks(game);
+        verify(view, times(3)).ShowSticks(game);
         verify(view).WrongInput();
         verify(view).UserLose();
         verify(game).OneStickLeft();
